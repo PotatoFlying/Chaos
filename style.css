@@ -195,3 +195,426 @@ body{background:#190b0b;background-image:radial-gradient(ellipse at 15% 12%,#3b0
     margin-top: 30px;
     margin-left: 5px;
 }
+
+
+/* ============================= */
+/*       ORDER PAGE              */
+/* ============================= */
+
+.order-page {
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(110, 15, 55, 0.25),
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(75, 20, 90, 0.20),
+            transparent 45%
+        ),
+        linear-gradient(
+            120deg,
+            #2e111d,
+            #1e1018 55%,
+            #211322
+        );
+
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 100vh;
+}
+/* HEADER */
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    border-bottom: 1px solid #30243c;
+}
+
+.order-header .logo {
+    font-size: 25px;
+    font-weight: 900;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.order-header .logo span {
+    color: #a855f7;
+}
+
+.order-header nav {
+    display: flex;
+    gap: 30px;
+}
+
+.order-header nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.order-header nav a:hover,
+.order-header nav a.active {
+    color: #a855f7;
+}
+
+/* MAIN */
+
+.order-container {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* INTRO */
+
+.order-intro {
+    text-align: center;
+    padding: 90px 20px 45px;
+}
+
+.order-tag {
+    color: #b6ff00;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.order-intro h1 {
+    font-size: clamp(38px, 7vw, 75px);
+    font-weight: 900;
+    margin: 15px 0;
+    transform: rotate(-2deg);
+}
+
+.order-intro h1 span,
+.order-info h2 span,
+.order-form-section h2 span {
+    color: #a855f7;
+}
+
+.order-intro > p:last-child {
+    color: #aaa;
+    max-width: 550px;
+    margin: 20px auto;
+    line-height: 1.7;
+}
+
+/* PRICE CARD */
+
+.price-card {
+    background: #1c1525;
+    border: 2px solid #a855f7;
+    box-shadow: 6px 6px 0 #b6ff00;
+    padding: 35px;
+    text-align: center;
+    max-width: 550px;
+    margin: 30px auto 100px;
+}
+
+.price-label {
+    color: #b6ff00;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.price {
+    margin: 15px 0;
+}
+
+.price span {
+    font-size: 65px;
+    font-weight: 900;
+    color: #fff;
+}
+
+.price small {
+    font-size: 20px;
+    color: #aaa;
+}
+
+.price-card > p:not(.price-label) {
+    color: #bbb;
+    line-height: 1.6;
+}
+
+.price-note {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 16px;
+    background: #b6ff00;
+    color: #111;
+    font-weight: 900;
+    font-size: 12px;
+    transform: rotate(-2deg);
+}
+
+/* HOW IT WORKS */
+
+.order-info {
+    margin-bottom: 110px;
+}
+
+.order-info h2,
+.order-form-section h2 {
+    text-align: center;
+    font-size: clamp(27px, 4vw, 40px);
+    margin-bottom: 45px;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.step {
+    background: #1c1525;
+    border: 1px solid #392b49;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.step:hover {
+    border-color: #b6ff00;
+    transform: translateY(-6px);
+}
+
+.step > span {
+    color: #b6ff00;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.step h3 {
+    margin: 20px 0 10px;
+    color: #c084fc;
+}
+
+.step p {
+    color: #aaa;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* ORDER FORM */
+
+.order-form-section {
+    max-width: 750px;
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+.form-subtitle {
+    color: #aaa;
+    text-align: center;
+    margin-top: -25px;
+    margin-bottom: 40px;
+}
+
+.order-form {
+    background: #1c1525;
+    border: 1px solid #49345d;
+    padding: 40px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #c084fc;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background: #100d16;
+    border: 1px solid #49345d;
+    padding: 15px;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #b6ff00;
+    box-shadow: 0 0 8px #b6ff0040;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.order-submit {
+    width: 100%;
+    padding: 17px;
+    border: 2px solid #b6ff00;
+    background: #a855f7;
+    color: white;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.order-submit:hover {
+    background: #b6ff00;
+    color: #111;
+    transform: translateY(-3px);
+}
+
+.form-disclaimer {
+    text-align: center;
+    color: #777;
+    font-size: 12px;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+/* FOOTER */
+
+.order-footer {
+    border-top: 1px solid #30243c;
+    text-align: center;
+    padding: 25px;
+    color: #777;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .order-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .order-header nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .order-container {
+        width: 90%;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .order-form {
+        padding: 22px;
+    }
+
+    .price-card {
+        margin-bottom: 75px;
+    }
+}
+
+/* ============================= */
+/* TYPOGRAPHIE CHAOS - COMMANDES */
+/* ============================= */
+
+.order-header .logo,
+.order-intro h1,
+.order-info h2,
+.order-form-section h2,
+.price span,
+.step h3 {
+    font-family: 'Sedgwick Ave Display',
+                 'Permanent Marker',
+                 cursive !important;
+
+    font-weight: 400;
+    -webkit-text-stroke: 1.35px currentColor;
+    paint-order: stroke fill;
+    filter: contrast(1.38) saturate(1.15);
+}
+
+/* Logo */
+
+.order-header .logo {
+    color: #ff00a8;
+    text-shadow: 3px 3px 0 #baff00,
+                 -2px -2px 0 #b000ff;
+    transform: rotate(-7deg);
+}
+
+/* Grands titres */
+
+.order-intro h1,
+.order-info h2,
+.order-form-section h2 {
+    text-shadow:
+        2px 1px 0 #100710,
+        4px 3px 0 #baff00,
+        7px 5px 0 #b000ff,
+        9px 8px 0 #080508;
+    transform: rotate(-3deg) skewX(-8deg);
+}
+
+/* Couleurs des titres */
+
+.order-intro h1 span,
+.order-info h2 span,
+.order-form-section h2 span {
+    color: #ff00a8;
+}
+
+/* Prix */
+
+
+
+
+/* Étapes */
+
+.step h3 {
+    color: #ff00a8;
+    text-shadow: 2px 2px 0 #b000ff;
+    font-size: 27px;
+}
+
+/* Petits titres */
+
+.price-label,
+.form-group label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Navigation */
+
+.order-header nav {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+/* Titres des étapes : style simple */
+
+.step h3 {
+    color: #ff00a8;
+    text-shadow: none !important;
+    -webkit-text-stroke: 0 !important;
+    filter: none !important;
+    transform: none !important;
+}

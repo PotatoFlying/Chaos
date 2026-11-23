@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commander | CHAOS!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="order-page">
+
+    <header class="order-header">
+        <a href="index.html" class="logo">CHAOS</a>
+
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="galerie.html">Galerie</a>
+            <a href="commander.html" class="active">Commander</a>
+        </nav>
+    </header>
+
+    <main class="order-container">
+
+        <section class="order-intro">
+            <p class="order-tag">MAKE YOUR IDEA REAL</p>
+
+            <h1>PLACE YOUR <span>ORDER</span></h1>
+
+            <p>
+                Une idée en tête ? Une illustration personnalisée ?
+                Fais-nous découvrir ton projet !
+            </p>
+        </section>
+
+        <section class="price-card">
+            <p class="price-label">STARTING PRICE</p>
+
+            <div class="price">
+                <span>5€</span>
+                <small>/ heure</small>
+            </div>
+
+            <p>
+                Le prix final dépend du temps de réalisation
+                et de la complexité de votre projet.
+            </p>
+
+            <span class="price-note">DEVIS PERSONNALISÉ</span>
+        </section>
+
+        <section class="order-info">
+            <h2>HOW DOES IT <span>WORK?</span></h2>
+
+            <div class="steps">
+
+                <div class="step">
+                    <span>01</span>
+                    <h3>YOUR IDEA</h3>
+                    <p>Présentez-nous votre projet et vos envies.</p>
+                </div>
+
+                <div class="step">
+                    <span>02</span>
+                    <h3>THE QUOTE</h3>
+                    <p>Nous estimons le temps de travail et vous proposons un prix.</p>
+                </div>
+
+                <div class="step">
+                    <span>03</span>
+                    <h3>THE ART</h3>
+                    <p>Après validation du devis, place à la création !</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="order-form-section">
+            <h2>LET'S CREATE <span>SOMETHING</span></h2>
+
+            <p class="form-subtitle">
+                Remplissez les informations ci-dessous pour présenter votre projet.
+            </p>
+
+            <form class="order-form">
+
+                <div class="form-group">
+                    <label for="name">Votre pseudo / nom</label>
+                    <input type="text" id="name" name="name"
+                        placeholder="Votre nom..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Adresse e-mail</label>
+                    <input type="email" id="email" name="email"
+                        placeholder="exemple@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="type">Type de création</label>
+                    <select id="type" name="type" required>
+                        <option value="">Choisissez une catégorie</option>
+                        <option value="illustration">Illustration</option>
+                        <option value="personnage">Personnage</option>
+                        <option value="logo">Logo / Emblème</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description du projet</label>
+                    <textarea id="description" name="description"
+                        rows="6" placeholder="Décrivez votre idée..."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="order-submit">
+                    SEND YOUR REQUEST ↗
+                </button>
+
+                <p class="form-disclaimer">
+                    L'envoi de ce formulaire sera activé prochainement.
+                    Aucun paiement n'est demandé à cette étape.
+                </p>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="order-footer">
+        <p>© 2026 CHAOS CLUB — ALL RIGHTS RESERVED</p>
+    </footer>
+
+</body>
+</html>
