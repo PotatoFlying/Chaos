@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion | CHAOS CLUB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-page">
+
+    <header class="auth-header">
+        <a href="index.html" class="auth-logo">CHAOS!</a>
+
+        <nav>
+            <a href="index.html">Le studio</a>
+            <a href="boutique.html">Commandes</a>
+            <a href="galerie.html">Galerie</a>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+
+        <div class="auth-intro">
+            <p class="auth-eyebrow">WELCOME TO THE CHAOS</p>
+            <h1>JOIN THE <span>CLUB!</span></h1>
+            <p>Connecte-toi pour retrouver tes commandes et discuter avec l'artiste.</p>
+        </div>
+
+        <section class="auth-card">
+
+            <div class="auth-tabs">
+                <button class="auth-tab active" id="login-tab"
+                    onclick="showForm('login')">
+                    CONNEXION
+                </button>
+
+                <button class="auth-tab" id="register-tab"
+                    onclick="showForm('register')">
+                    INSCRIPTION
+                </button>
+            </div>
+
+            <!-- CONNEXION -->
+
+            <form id="login-form" class="auth-form">
+
+                <h2>WELCOME <span>BACK!</span></h2>
+
+                <div class="auth-field">
+                    <label for="login-email">ADRESSE E-MAIL</label>
+                    <input type="email" id="login-email"
+                        placeholder="ton@email.com" required>
+                </div>
+
+                <div class="auth-field">
+                    <label for="login-password">MOT DE PASSE</label>
+                    <input type="password" id="login-password"
+                        placeholder="Ton mot de passe" required>
+                </div>
+
+                <button type="submit" class="auth-submit">
+                    SE CONNECTER ↗
+                </button>
+                <p id="auth-message" class="auth-message"></p>
+
+            </form>
+
+            <!-- INSCRIPTION -->
+
+            <form id="register-form" class="auth-form hidden">
+
+                <h2>CREATE YOUR <span>ACCOUNT!</span></h2>
+
+                <div class="auth-field">
+                    <label for="register-name">PSEUDO</label>
+                    <input type="text" id="register-name"
+                        placeholder="Ton pseudo" required>
+                </div>
+
+                <div class="auth-field">
+                    <label for="register-email">ADRESSE E-MAIL</label>
+                    <input type="email" id="register-email"
+                        placeholder="ton@email.com" required>
+                </div>
+
+                <div class="auth-field">
+                    <label for="register-password">MOT DE PASSE</label>
+                    <input type="password" id="register-password"
+                        placeholder="Minimum 8 caractères" minlength="8" required>
+                </div>
+
+                <div class="auth-field">
+                    <label for="register-confirm">CONFIRMER LE MOT DE PASSE</label>
+                    <input type="password" id="register-confirm"
+                        placeholder="Confirme ton mot de passe" minlength="8" required>
+                </div>
+
+                <button type="submit" class="auth-submit">
+                    CRÉER MON COMPTE ↗
+                </button>
+                <p id="auth-message" class="auth-message"></p>
+
+            </form>
+
+            <p class="auth-terms">
+                En créant un compte, tu acceptes les conditions
+                d'utilisation de CHAOS CLUB.
+            </p>
+
+        </section>
+
+        <a href="index.html" class="auth-back">← RETOUR À L'ACCUEIL</a>
+
+    </main>
+
+    <footer class="auth-footer">
+        © 2026 CHAOS CLUB — STAY WEIRD.
+    </footer>
+
+    <script>
+        function showForm(type) {
+            const loginForm = document.getElementById("login-form");
+            const registerForm = document.getElementById("register-form");
+
+            const loginTab = document.getElementById("login-tab");
+            const registerTab = document.getElementById("register-tab");
+
+            if (type === "login") {
+                loginForm.classList.remove("hidden");
+                registerForm.classList.add("hidden");
+
+                loginTab.classList.add("active");
+                registerTab.classList.remove("active");
+            } else {
+                registerForm.classList.remove("hidden");
+                loginForm.classList.add("hidden");
+
+                registerTab.classList.add("active");
+                loginTab.classList.remove("active");
+            }
+        }
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="connexion.js"></script>
+
+</body>
+</html>

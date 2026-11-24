@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon compte | CHAOS CLUB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-page">
+
+    <header class="auth-header">
+        <a href="index.html" class="auth-logo">CHAOS!</a>
+
+        <nav>
+            <a href="index.html">LE STUDIO</a>
+            <a href="boutique.html">COMMANDES</a>
+            <a href="galerie.html">GALERIE</a>
+        </nav>
+    </header>
+
+    <main class="account-container">
+
+        <div class="account-intro">
+            <p class="auth-eyebrow">WELCOME TO YOUR SPACE</p>
+            <h1>MY <span>ACCOUNT!</span></h1>
+            <p>Ton espace personnel CHAOS CLUB.</p>
+        </div>
+
+        <section class="account-card">
+
+            <div class="account-profile">
+                <div class="account-avatar">C!</div>
+
+                <div>
+                    <p class="account-label">BIENVENUE</p>
+                    <h2 id="account-pseudo">Chargement...</h2>
+                    <p id="account-email" class="account-email"></p>
+                </div>
+            </div>
+
+            <div class="account-divider"></div>
+
+            <h3>YOUR SPACE</h3>
+
+            <div class="account-links">
+
+                <a href="boutique.html" class="account-link">
+                    <span>01</span>
+                    <div>
+                        <strong>MES COMMANDES</strong>
+                        <small>Découvrir et passer une commande</small>
+                    </div>
+                    <b>↗</b>
+                </a>
+
+                <a href="messagerie.html" class="account-link">
+                    <span>02</span>
+                    <div>
+                        <strong>MESSAGERIE</strong>
+                        <small>Discuter avec l'artiste</small>
+                    </div>
+                    <b>↗</b>
+                </a>
+
+            </div>
+
+            <button id="logout-button" class="account-logout">
+                SE DÉCONNECTER ↗
+            </button>
+
+            <p id="account-message" class="auth-message"></p>
+
+        </section>
+
+        <a href="index.html" class="auth-back">
+            ← RETOUR À L'ACCUEIL
+        </a>
+
+    </main>
+
+    <footer class="auth-footer">
+        © 2026 CHAOS CLUB — STAY WEIRD.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+    <script src="account.js"></script>
+
+</body>
+</html>

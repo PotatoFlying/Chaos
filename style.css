@@ -618,3 +618,505 @@ body{background:#190b0b;background-image:radial-gradient(ellipse at 15% 12%,#3b0
     filter: none !important;
     transform: none !important;
 }
+
+
+/* ================================= */
+/*       CHAOS CLUB - AUTH PAGE      */
+/* ================================= */
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&family=Space+Grotesk:wght@400;700&display=swap');
+.auth-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at 15% 12%, #3b0c25 0, transparent 32%),
+        radial-gradient(ellipse at 88% 40%, #20102d 0, transparent 35%),
+        #190b0b;
+    color: #fff0e7;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* HEADER */
+
+.auth-header {
+    width: min(1180px, 92%);
+    margin: auto;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ffffff25;
+}
+
+.auth-logo {
+    font: 38px 'Sedgwick Ave Display', cursive;
+    color: #ff00a8;
+    text-decoration: none;
+    text-shadow: 3px 3px #baff00;
+    transform: rotate(-6deg);
+}
+
+.auth-header nav {
+    display: flex;
+    gap: 30px;
+}
+
+.auth-header nav a {
+    color: #fff0e7;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.auth-header nav a:hover {
+    color: #baff00;
+}
+
+/* INTRO */
+
+.auth-container {
+    width: 90%;
+    max-width: 650px;
+    margin: auto;
+    padding: 65px 0 50px;
+}
+
+.auth-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.auth-eyebrow {
+    color: #baff00;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.auth-intro h1 {
+    font: clamp(48px, 9vw, 80px) 'Sedgwick Ave Display', cursive;
+    color: #ff00a8;
+    margin: 20px 0;
+    transform: rotate(-3deg);
+    text-shadow: 4px 4px #b000ff;
+}
+
+.auth-intro h1 span {
+    color: #baff00;
+}
+
+.auth-intro > p:last-child {
+    color: #d0b9b4;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* CARD */
+
+.auth-card {
+    background: #24101f;
+    border: 2px solid #ff00a8;
+    box-shadow: 9px 9px 0 #baff00;
+    padding: 35px;
+}
+
+/* TABS */
+
+.auth-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.auth-tab {
+    padding: 15px 8px;
+    background: transparent;
+    color: #bdb4c5;
+    border: 2px dashed #68405e;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.auth-tab.active {
+    background: #ff00a8;
+    border: 2px solid #160b12;
+    color: white;
+    box-shadow: 4px 4px 0 #baff00;
+}
+
+/* FORM */
+
+.auth-form h2 {
+    font: 32px 'Sedgwick Ave Display', cursive;
+    color: #ff00a8;
+    margin-bottom: 30px;
+}
+
+.auth-form h2 span {
+    color: #baff00;
+}
+
+.auth-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 23px;
+}
+
+.auth-field label {
+    color: #baff00;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.auth-field input {
+    background: #160b12;
+    border: 1px solid #68405e;
+    padding: 15px;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: .2s;
+}
+
+.auth-field input:focus {
+    border-color: #baff00;
+    box-shadow: 0 0 8px #baff0040;
+}
+
+.auth-field input::placeholder {
+    color: #806d7b;
+}
+
+/* SUBMIT */
+
+.auth-submit {
+    width: 100%;
+    padding: 17px;
+    background: #ff00a8;
+    color: white;
+    border: 2px solid #160b12;
+    box-shadow: 5px 5px 0 #baff00;
+    font-weight: 900;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.auth-submit:hover {
+    background: #baff00;
+    color: #160b12;
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+
+.auth-terms {
+    color: #9e8c9b;
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.6;
+    margin-top: 25px;
+}
+
+.auth-back {
+    display: block;
+    margin-top: 35px;
+    text-align: center;
+    color: #baff00;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.auth-back:hover {
+    color: #ff00a8;
+}
+
+.auth-footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #ffffff25;
+    color: #9e8c9b;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .auth-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .auth-header nav {
+        gap: 15px;
+    }
+
+    .auth-card {
+        padding: 22px;
+    }
+
+    .auth-container {
+        padding-top: 45px;
+    }
+}
+
+/* TITRES GRAFFITI - CONNEXION */
+
+.auth-intro h1,
+.auth-form h2 {
+    font-family: 'Permanent Marker', cursive !important;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 1.05;
+}
+
+.auth-intro h1 {
+    color: #ff00a8;
+    font-size: clamp(52px, 9vw, 85px);
+    transform: rotate(-4deg) skewX(-5deg);
+    text-shadow:
+        3px 3px 0 #170817,
+        5px 5px 0 #baff00,
+        7px 7px 0 #170817;
+}
+
+.auth-form h2 {
+    color: #ff00a8;
+    font-size: 36px;
+    text-shadow: none;
+}
+/* LOGO CHAOS - PAGE CONNEXION */
+
+.auth-logo {
+    font-family: 'Permanent Marker', cursive !important;
+    font-size: 38px;
+    font-weight: 400;
+    font-style: italic;
+    color: #ff00a8;
+    text-decoration: none;
+
+    text-shadow:
+        3px 3px 0 #baff00,
+        5px 4px 0 #170817;
+
+    transform: rotate(-6deg);
+    display: inline-block;
+    letter-spacing: -2px;
+}
+/* BOUTON COMPTE */
+
+.nav-account {
+    background: #ff00a8;
+    color: white !important;
+    padding: 12px 16px;
+    border: 1px solid #160b12;
+    box-shadow: 4px 4px 0 #baff00;
+    text-decoration: none;
+    font-weight: 900 !important;
+    transition: 0.2s;
+}
+
+.nav-account:hover {
+    background: #baff00;
+    color: #160b12 !important;
+    transform: translateY(-3px);
+    box-shadow: 4px 7px 0 #ff00a8;
+}
+.auth-message {
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.auth-submit:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+/* ================================= */
+/*       CHAOS CLUB - MON COMPTE     */
+/* ================================= */
+
+.account-container {
+    width: 90%;
+    max-width: 650px;
+    margin: auto;
+    padding: 65px 0 55px;
+}
+
+.account-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.account-intro h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: clamp(48px, 8vw, 75px);
+    color: #ff00a8;
+    transform: rotate(-3deg);
+    margin: 20px 0;
+}
+
+.account-intro h1 span {
+    color: #baff00;
+}
+
+.account-intro > p:last-child {
+    color: #d0b9b4;
+    font-size: 14px;
+}
+
+.account-card {
+    background: #24101f;
+    border: 2px solid #ff00a8;
+    box-shadow: 8px 8px 0 #baff00;
+    padding: 35px;
+}
+
+.account-profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.account-avatar {
+    width: 65px;
+    height: 65px;
+    display: grid;
+    place-items: center;
+    background: #ff00a8;
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 27px;
+    transform: rotate(-5deg);
+    box-shadow: 4px 4px 0 #baff00;
+}
+
+.account-label {
+    color: #baff00;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.account-profile h2 {
+    color: #ff00a8;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 26px;
+    margin: 5px 0;
+}
+
+.account-email {
+    color: #bdb4c5;
+    font-size: 13px;
+}
+
+.account-divider {
+    height: 1px;
+    background: #68405e;
+    margin: 30px 0;
+}
+
+.account-card h3 {
+    color: #baff00;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.account-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.account-link {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px;
+    background: #190b18;
+    border: 1px solid #68405e;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.account-link > span {
+    color: #baff00;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.account-link div {
+    flex: 1;
+}
+
+.account-link strong {
+    display: block;
+    color: #ff00a8;
+    font-size: 13px;
+}
+
+.account-link small {
+    display: block;
+    color: #bdb4c5;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.account-link b {
+    color: #baff00;
+}
+
+.account-link:hover {
+    border-color: #baff00;
+    transform: translateX(5px);
+}
+
+.account-logout {
+    width: 100%;
+    margin-top: 30px;
+    padding: 16px;
+    background: transparent;
+    color: #ff00a8;
+    border: 2px dashed #ff00a8;
+    font-weight: 900;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.account-logout:hover {
+    background: #ff00a8;
+    color: white;
+    border-style: solid;
+}
+
+@media (max-width: 600px) {
+    .account-card {
+        padding: 22px;
+    }
+
+    .account-profile {
+        gap: 13px;
+    }
+
+    .account-profile h2 {
+        font-size: 21px;
+    }
+}
