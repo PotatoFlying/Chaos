@@ -1,136 +1,254 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commander | CHAOS!</title>
+    <title>Commandes | CHAOS CLUB</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="auth-nav.css">
 </head>
 
-<body class="order-page">
+<body class="shop-page">
 
-    <header class="order-header">
-        <a href="index.html" class="logo">CHAOS</a>
+    <header class="shop-header">
+        <a href="index.html" class="shop-logo">CHAOS!</a>
 
         <nav>
-            <a href="index.html">Accueil</a>
-            <a href="galerie.html">Galerie</a>
-            <a href="commander.html" class="active">Commander</a>
+            <a href="index.html">LE STUDIO</a>
+            <a href="galerie.html">GALERIE</a>
+            <a href="boutique.html" class="active">COMMANDES</a>
+            <a href="connexion.html" class="shop-account">REGISTER / SIGN IN ↗</a>
         </nav>
     </header>
 
-    <main class="order-container">
+    <main class="shop-main">
 
-        <section class="order-intro">
-            <p class="order-tag">MAKE YOUR IDEA REAL</p>
+        <!-- INTRODUCTION -->
 
-            <h1>PLACE YOUR <span>ORDER</span></h1>
+        <section class="shop-intro">
+            <p class="shop-eyebrow">CREATE SOMETHING CRAZY</p>
 
-            <p>
-                Une idée en tête ? Une illustration personnalisée ?
-                Fais-nous découvrir ton projet !
+            <h1>YOUR ART.<br><span>YOUR CHAOS.</span></h1>
+
+            <p class="shop-description">
+                Configure ton projet, choisis ton style et découvre
+                une estimation du prix de ta création.
             </p>
         </section>
 
-        <section class="price-card">
-            <p class="price-label">STARTING PRICE</p>
+        <!-- CALCULATEUR -->
 
-            <div class="price">
-                <span>5€</span>
-                <small>/ heure</small>
+        <section class="price-calculator">
+
+            <div class="calculator-heading">
+                <span class="calculator-number">01</span>
+                <h2>BUILD YOUR <span>ORDER!</span></h2>
             </div>
 
-            <p>
-                Le prix final dépend du temps de réalisation
-                et de la complexité de votre projet.
-            </p>
+            <!-- NOMBRE DE DESSINS -->
 
-            <span class="price-note">DEVIS PERSONNALISÉ</span>
-        </section>
+            <div class="calculator-section">
+                <label class="calculator-label">
+                    NUMBER OF DRAWINGS
+                </label>
 
-        <section class="order-info">
-            <h2>HOW DOES IT <span>WORK?</span></h2>
+                <div class="quantity-selector">
+                    <button type="button" class="quantity-button">−</button>
 
-            <div class="steps">
+                    <div class="quantity-value">
+                        <span id="quantity">1</span>
+                        <small>DRAWING</small>
+                    </div>
 
-                <div class="step">
-                    <span>01</span>
-                    <h3>YOUR IDEA</h3>
-                    <p>Présentez-nous votre projet et vos envies.</p>
+                    <button type="button" class="quantity-button">+</button>
+                </div>
+            </div>
+
+            <!-- TAILLE -->
+
+            <div class="calculator-section">
+                <label class="calculator-label">
+                    SIZE
+                </label>
+
+                <div class="choice-grid size-grid">
+
+                    <button type="button" class="choice-card active">
+                        <span class="choice-icon">◈</span>
+                        <strong>SMALL</strong>
+                        <small>Petit format</small>
+                    </button>
+
+                    <button type="button" class="choice-card">
+                        <span class="choice-icon">◇</span>
+                        <strong>MEDIUM</strong>
+                        <small>Format standard</small>
+                    </button>
+
+                    <button type="button" class="choice-card">
+                        <span class="choice-icon">⬡</span>
+                        <strong>LARGE</strong>
+                        <small>Grand format</small>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- TYPE DE DESSIN -->
+
+            <div class="calculator-section">
+                <label class="calculator-label">
+                    ART STYLE
+                </label>
+
+                <div class="choice-grid style-grid">
+
+                    <button type="button" class="choice-card active">
+                        <span class="choice-icon">✏</span>
+                        <strong>SKETCH</strong>
+                        <small>Croquis</small>
+                        <span class="choice-price">À PARTIR DE 5 €</span>
+                    </button>
+
+                    <button type="button" class="choice-card">
+                        <span class="choice-icon">🎨</span>
+                        <strong>SIMPLE</strong>
+                        <small>Illustration simple</small>
+                        <span class="choice-price">À PARTIR DE 10 €</span>
+                    </button>
+
+                    <button type="button" class="choice-card">
+                        <span class="choice-icon">🔥</span>
+                        <strong>DETAILED</strong>
+                        <small>Illustration détaillée</small>
+                        <span class="choice-price">À PARTIR DE 15 €</span>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- PRIX -->
+
+            <div class="price-result">
+
+                <div class="price-result-text">
+                    <p>YOUR ESTIMATED PRICE</p>
+                    <h2><span id="estimated-price">5</span> €</h2>
+                    <small>
+                        Estimation indicative — le prix final sera confirmé
+                        par l'artiste.
+                    </small>
                 </div>
 
-                <div class="step">
-                    <span>02</span>
-                    <h3>THE QUOTE</h3>
-                    <p>Nous estimons le temps de travail et vous proposons un prix.</p>
-                </div>
-
-                <div class="step">
-                    <span>03</span>
-                    <h3>THE ART</h3>
-                    <p>Après validation du devis, place à la création !</p>
+                <div class="price-result-decoration">
+                    CHAOS!
                 </div>
 
             </div>
+
+            <!-- BOUTON -->
+
+            <button type="button" class="order-button">
+                PASSER COMMANDE <span>↗</span>
+            </button>
+
         </section>
 
-        <section class="order-form-section">
-            <h2>LET'S CREATE <span>SOMETHING</span></h2>
 
-            <p class="form-subtitle">
-                Remplissez les informations ci-dessous pour présenter votre projet.
-            </p>
+        <!-- FORMULAIRE DE COMMANDE -->
+        <div class="order-modal" id="order-modal" hidden>
+            <button type="button" class="order-modal-backdrop" data-close-order aria-label="Fermer le formulaire"></button>
 
-            <form class="order-form">
+            <section class="order-modal-panel" role="dialog" aria-modal="true" aria-labelledby="order-modal-title">
+                <button type="button" class="order-modal-close" data-close-order aria-label="Fermer">×</button>
 
-                <div class="form-group">
-                    <label for="name">Votre pseudo / nom</label>
-                    <input type="text" id="name" name="name"
-                        placeholder="Votre nom..." required>
+                <p class="shop-eyebrow">ONE STEP CLOSER TO YOUR CHAOS</p>
+                <h2 id="order-modal-title">YOUR <span>PROJECT.</span></h2>
+                <p class="order-modal-intro">Présente ton idée à l'artiste. Ceci envoie une demande de commande, pas un paiement.</p>
+
+                <div class="order-summary">
+                    <p class="order-summary-title">TON RÉCAPITULATIF</p>
+                    <div><span>Style</span><strong id="summary-style">Sketch</strong></div>
+                    <div><span>Format</span><strong id="summary-format">Petit</strong></div>
+                    <div><span>Quantité</span><strong id="summary-quantity">1</strong></div>
+                    <div class="order-summary-total"><span>Estimation</span><strong id="summary-total">5 €</strong></div>
                 </div>
 
-                <div class="form-group">
-                    <label for="email">Adresse e-mail</label>
-                    <input type="email" id="email" name="email"
-                        placeholder="exemple@email.com" required>
-                </div>
+                <form id="order-form">
+                    <label class="order-field">
+                        <span>TON NOM OU PSEUDO *</span>
+                        <input type="text" id="customer-name" name="customer_name" minlength="2" maxlength="80" autocomplete="name" required>
+                    </label>
 
-                <div class="form-group">
-                    <label for="type">Type de création</label>
-                    <select id="type" name="type" required>
-                        <option value="">Choisissez une catégorie</option>
-                        <option value="illustration">Illustration</option>
-                        <option value="personnage">Personnage</option>
-                        <option value="logo">Logo / Emblème</option>
-                        <option value="autre">Autre</option>
-                    </select>
-                </div>
+                    <label class="order-field">
+                        <span>TON ADRESSE E-MAIL *</span>
+                        <input type="email" id="customer-email" name="customer_email" maxlength="254" autocomplete="email" required>
+                    </label>
 
-                <div class="form-group">
-                    <label for="description">Description du projet</label>
-                    <textarea id="description" name="description"
-                        rows="6" placeholder="Décrivez votre idée..."
-                        required></textarea>
-                </div>
+                    <label class="order-field">
+                        <span>DÉCRIS TON PROJET *</span>
+                        <textarea id="order-description" name="description" rows="5" minlength="10" maxlength="1500" placeholder="Personnage, ambiance, couleurs, détails importants..." required></textarea>
+                    </label>
 
-                <button type="submit" class="order-submit">
-                    SEND YOUR REQUEST ↗
-                </button>
+                    <label class="order-field">
+                        <span>LIEN VERS UNE IMAGE DE RÉFÉRENCE (FACULTATIF)</span>
+                        <input type="url" id="reference-url" name="reference_url" maxlength="500" placeholder="https://...">
+                    </label>
 
-                <p class="form-disclaimer">
-                    L'envoi de ce formulaire sera activé prochainement.
-                    Aucun paiement n'est demandé à cette étape.
+                    <label class="order-confirm">
+                        <input type="checkbox" id="confirm-estimate" required>
+                        <span>Je comprends qu'il s'agit d'une demande et que le prix final ainsi que le délai seront confirmés par l'artiste.</span>
+                    </label>
+
+                    <p class="order-form-status" id="order-form-status" role="status" aria-live="polite"></p>
+
+                    <button type="submit" class="order-submit-button" id="submit-order-button">ENVOYER MA DEMANDE ↗</button>
+                </form>
+            </section>
+        </div>
+
+        <p class="order-auth-message" id="order-auth-message" role="status" hidden></p>
+
+        <!-- INFORMATIONS -->
+
+        <section class="shop-information">
+
+            <div class="shop-info-card">
+                <span>01</span>
+                <h3>MADE WITH LOVE</h3>
+                <p>
+                    Chaque dessin est réalisé à la main avec soin
+                    et selon ta demande.
                 </p>
+            </div>
 
-            </form>
+            <div class="shop-info-card">
+                <span>02</span>
+                <h3>PRICE ESTIMATE</h3>
+                <p>
+                    Le calculateur donne une estimation.
+                    Le tarif définitif dépend de la complexité du projet.
+                </p>
+            </div>
+
+            <div class="shop-info-card">
+                <span>03</span>
+                <h3>YOUR PROJECT</h3>
+                <p>
+                    Une demande particulière ? Contacte l'artiste
+                    pour discuter de ton idée.
+                </p>
+            </div>
+
         </section>
 
     </main>
 
-    <footer class="order-footer">
-        <p>© 2026 CHAOS! — ALL RIGHTS RESERVED</p>
+    <footer class="shop-footer">
+        © 2026 CHAOS CLUB — STAY WEIRD.
     </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="boutique.js"></script>
 </body>
 </html>

@@ -1,92 +1,85 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon compte | CHAOS CLUB</title>
+    <meta name="description" content="Ton espace personnel CHAOS!">
+    <title>Mon compte | CHAOS!</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="compte.css">
+    <link rel="stylesheet" href="messagerie.css">
 </head>
-
-<body class="auth-page">
-
-    <header class="auth-header">
-        <a href="index.html" class="auth-logo">CHAOS!</a>
-
-        <nav>
-            <a href="index.html">LE STUDIO</a>
-            <a href="boutique.html">COMMANDES</a>
+<body class="account-page">
+    <header class="account-header">
+        <a href="index.html" class="account-logo">CHAOS!</a>
+        <nav class="account-nav">
+            <a href="le-studio.html">LE STUDIO</a>
             <a href="galerie.html">GALERIE</a>
+            <a href="boutique.html">COMMANDES</a>
         </nav>
     </header>
 
-    <main class="account-container">
+    <main class="account-main">
+        <!-- PROFIL -->
+        <section class="account-card profile-card">
+            <p class="account-eyebrow">YOUR PERSONAL SPACE</p>
+            <h1>MY ACCOUNT<span>.</span></h1>
+            <p class="account-intro">Bienvenue dans ton espace CHAOS!.</p>
 
-        <div class="account-intro">
-            <p class="auth-eyebrow">WELCOME TO YOUR SPACE</p>
-            <h1>MY <span>ACCOUNT!</span></h1>
-            <p>Ton espace personnel CHAOS CLUB.</p>
-        </div>
-
-        <section class="account-card">
-
-            <div class="account-profile">
-                <div class="account-avatar">C!</div>
-
-                <div>
-                    <p class="account-label">BIENVENUE</p>
-                    <h2 id="account-pseudo">Chargement...</h2>
-                    <p id="account-email" class="account-email"></p>
+            <div class="profile-identity">
+                <div class="profile-avatar-wrap">
+                    <div class="profile-avatar" id="profile-avatar-initials" aria-hidden="true">C!</div>
+                    <img id="profile-avatar-image" class="profile-avatar-image" alt="Photo de profil" hidden>
+                </div>
+                <div class="profile-identity-text">
+                    <h2 id="profile-display-name">Chargement...</h2>
+                    <p id="profile-email" class="profile-email"></p>
                 </div>
             </div>
 
-            <div class="account-divider"></div>
-
-            <h3>YOUR SPACE</h3>
-
-            <div class="account-links">
-
-                <a href="boutique.html" class="account-link">
-                    <span>01</span>
-                    <div>
-                        <strong>MES COMMANDES</strong>
-                        <small>Découvrir et passer une commande</small>
-                    </div>
-                    <b>↗</b>
-                </a>
-
-                <a href="messagerie.html" class="account-link">
-                    <span>02</span>
-                    <div>
-                        <strong>MESSAGERIE</strong>
-                        <small>Discuter avec l'artiste</small>
-                    </div>
-                    <b>↗</b>
-                </a>
-
+            <div class="avatar-upload-row">
+                <input id="avatar-file" class="avatar-file-input" type="file" accept="image/png,image/jpeg,image/webp">
+                <label for="avatar-file" class="account-secondary avatar-select-button">CHOISIR UNE PHOTO</label>
+                <button type="button" id="avatar-upload-button" class="account-submit avatar-upload-button">ENREGISTRER LA PHOTO ↗</button>
             </div>
+            <p class="avatar-help">Formats acceptés : JPG, PNG ou WebP. Taille maximale : 2 Mo.</p>
 
-            <button id="logout-button" class="account-logout">
-                SE DÉCONNECTER ↗
-            </button>
+            <form id="profile-form" class="account-form">
+                <label for="profile-name">TON PSEUDO</label>
+                <input id="profile-name" name="display-name" type="text" minlength="2" maxlength="40" required>
+                <button type="submit" class="account-submit" id="profile-save">ENREGISTRER LE PSEUDO ↗</button>
+            </form>
 
-            <p id="account-message" class="auth-message"></p>
+            <p id="profile-status" class="account-status" role="status" aria-live="polite"></p>
 
+            <div class="profile-actions">
+                <a class="account-secondary" href="boutique.html">FAIRE UNE COMMANDE ↗</a>
+                <a class="account-submit admin-entry-link" id="admin-entry-link" href="admin.html" hidden>ESPACE ADMIN ↗</a>
+                <button class="account-logout" id="logout-button" type="button">SE DÉCONNECTER</button>
+            </div>
         </section>
 
-        <a href="index.html" class="auth-back">
-            ← RETOUR À L'ACCUEIL
-        </a>
+        <!-- COMMANDES DU CLIENT -->
+        <section class="account-card orders-card" aria-labelledby="orders-title">
+            <div class="orders-heading">
+                <div>
+                    <p class="account-eyebrow">YOUR CREATIONS IN PROGRESS</p>
+                    <h2 id="orders-title">MY ORDERS<span>.</span></h2>
+                    <p class="orders-intro">Retrouve ici toutes les demandes que tu as envoyées à CHAOS!.</p>
+                </div>
+                <button type="button" class="orders-refresh" id="refresh-orders-button" aria-label="Actualiser les commandes" title="Actualiser">↻</button>
+            </div>
 
+            <p id="orders-status" class="orders-status" role="status" aria-live="polite">Chargement de tes commandes...</p>
+            <div id="orders-list" class="orders-list" aria-live="polite"></div>
+        </section>
     </main>
 
-    <footer class="auth-footer">
-        © 2026 CHAOS CLUB — STAY WEIRD.
-    </footer>
+    <footer class="account-footer">© 2026 CHAOS! — STAY WEIRD.</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="supabase.js"></script>
-    <script src="account.js"></script>
-
+    <script src="messagerie.js"></script>
+    <script src="compte.js"></script>
 </body>
 </html>

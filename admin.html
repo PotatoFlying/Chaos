@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Espace de gestion des commandes CHAOS!">
+    <title>Admin | CHAOS!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="messagerie.css">
+</head>
+<body class="admin-page">
+    <header class="admin-header">
+        <a href="index.html" class="admin-logo">CHAOS!</a>
+        <nav class="admin-nav">
+            <a href="index.html">SITE</a>
+            <a href="mon-compte.html">MON PROFIL</a>
+        </nav>
+    </header>
+
+    <main class="admin-main">
+        <section class="admin-heading">
+            <p class="admin-eyebrow">PRIVATE WORKSPACE // CHAOS!</p>
+            <h1>ORDER <span>CONTROL.</span></h1>
+            <p>Gère les demandes de commissions, confirme les projets et mets à jour leur statut.</p>
+        </section>
+
+        <section class="admin-dashboard" aria-labelledby="orders-title">
+            <div class="admin-dashboard-top">
+                <div>
+                    <p class="admin-eyebrow">INCOMING REQUESTS</p>
+                    <h2 id="orders-title">ALL <span>ORDERS.</span></h2>
+                </div>
+                <button type="button" class="admin-refresh" id="refresh-orders" title="Actualiser les commandes" aria-label="Actualiser les commandes">↻</button>
+            </div>
+
+            <div class="admin-toolbar">
+                <label class="admin-filter-label" for="status-filter">STATUT</label>
+                <select id="status-filter" class="admin-select">
+                    <option value="all">Toutes les commandes</option>
+                    <option value="pending">En attente</option>
+                    <option value="accepted">Acceptées</option>
+                    <option value="declined">Refusées</option>
+                    <option value="completed">Terminées</option>
+                </select>
+                <input id="order-search" class="admin-search" type="search" placeholder="Rechercher un client, un e-mail..." autocomplete="off">
+            </div>
+
+            <p class="admin-feedback" id="admin-feedback" role="status" aria-live="polite">Vérification des accès...</p>
+            <div class="admin-orders-list" id="admin-orders-list" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer class="admin-footer">CHAOS! — PRIVATE ADMIN AREA</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+    <script src="messagerie.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
